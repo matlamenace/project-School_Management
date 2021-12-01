@@ -8,6 +8,7 @@ namespace project_School_Management
 {
     class Student
     {
+        // BENOIT
         string[] personnalinfo;
         List<string> attendence;
         string[] results;
