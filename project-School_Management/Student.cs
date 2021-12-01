@@ -10,7 +10,7 @@ namespace project_School_Management
     {
         // BENOIT
         string[] personnalinfo;
-        List<string> attendence;
+        List<string> attendance;
         string[] results;
         public Student(string firstname,string famname,string gender, string dateofbirth) 
         {
@@ -22,14 +22,13 @@ namespace project_School_Management
         }
         public List<string> Attendence 
         {
-            get { return attendence; }
-            set { attendence = value; }
+            get { return attendance; }
+            set { attendance = value; }
         }
         public string[] Results 
         {
             get { return results; }
             set { results = value; }
         }
-        osighzrgorgz();
     }
 }
