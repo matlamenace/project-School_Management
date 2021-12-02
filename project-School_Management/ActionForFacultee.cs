@@ -16,7 +16,7 @@ namespace project_School_Management
         {
             assignement.grade = grade;
         }
-        public void StudentAttendance(Student student)
+        public void ShowStudentAttendance(Student student)
         {
             foreach(string s in student.Attendence)
             {

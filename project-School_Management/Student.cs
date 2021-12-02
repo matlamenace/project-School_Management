@@ -12,9 +12,12 @@ namespace project_School_Management
         string[] personnalinfo;
         List<string> attendance;
         string[] results;
+        List<Course> ListofCourses;
+        Fee fee;
         public Student(string firstname,string famname,string gender, string dateofbirth) 
         {
             this.personnalinfo = new string[] { firstname, famname, gender, dateofbirth };
+            this.fee = new Fee();
         }
         public string[] Personnalinfo 
         {
