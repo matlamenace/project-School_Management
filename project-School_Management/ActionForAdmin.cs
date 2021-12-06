@@ -11,6 +11,7 @@ namespace project_School_Management
         public static void AddStudent(string firstname, string famname, string dateofbirth, string gender) 
         {
             Student student = new Student(firstname, famname, dateofbirth, gender);
+            StudentList.studentlist.Add();
         }
         public static void AddCourse(string subject)
         {

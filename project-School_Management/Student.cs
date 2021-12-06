@@ -33,5 +33,15 @@ namespace project_School_Management
             get { return results; }
             set { results = value; }
         }
+        public Fee Fee
+        {
+            get { return fee; }
+            set { fee = value; }
+        }
+        public TimeTable Timetable
+        {
+            get { return timetable ; }
+            set { timetable = value; }
+        }
     }
 }

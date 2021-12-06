@@ -8,6 +8,13 @@ namespace project_School_Management
 {
     class Action //class of action
     {
-        
+        public static void SeeTimetable() 
+        {
+
+        }
+        public void PayFee(Student student, double amount)
+        {
+            student.Fee.Pay(amount);
+        }
     }
 }
