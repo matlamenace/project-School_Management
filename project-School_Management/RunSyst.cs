@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace project_School_Management
 {
-    class Action //class of action
+    class RunSyst
     {
-        public static void SeeTimetable() 
-        {
+        
 
-        }
     }
 }

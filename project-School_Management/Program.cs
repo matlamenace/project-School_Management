@@ -10,6 +10,13 @@ namespace project_School_Management
     {
         static void Main(string[] args)
         {
+            Dictionary<string, string> timetable = TimeTable.CreateCalendar();
+            foreach(KeyValuePair<string,string> key in timetable)
+            {
+                Console.WriteLine(key);
+               
+            }
+            Console.ReadKey();
         }
     }
 }
