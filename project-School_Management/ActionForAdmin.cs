@@ -12,5 +12,9 @@ namespace project_School_Management
         {
             Student student = new Student(firstname, famname, dateofbirth, gender);
         }
+        public static void AddCourse(string subject)
+        {
+            Course course = new Course(subject);
+        }
     }
 }

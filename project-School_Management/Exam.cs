@@ -8,6 +8,7 @@ namespace project_School_Management
 {
     class Exam
     {
+        public string grade { get; set; }
         Course course { get; set; }
         string date { get; set; }
         public Exam(Course course, string date) 
@@ -17,7 +18,10 @@ namespace project_School_Management
         }
         public override string ToString()
         {
-            return $"Exam : {course.Subject} date : {date}";
+            if(grade != null)
+                return $"Exam: {course.Subject} \t date: {date} \t grade: {grade}";
+            else
+                return $"Exam: {course.Subject} \t date: {date}";
         }
     }
 }
