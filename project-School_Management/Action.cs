@@ -8,6 +8,14 @@ namespace project_School_Management
 {
     class Action //class of action
     {
+        public static void SeeTimetable(Student student) 
+        {
+            foreach (KeyValuePair<string, string> key in student.Timetable.Timetable)
+            {
+                Console.WriteLine(key);
+            }
+        }
+    }
         public static void SeeTimetable() 
         {
 

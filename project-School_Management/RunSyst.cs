@@ -134,7 +134,7 @@ namespace project_School_Management
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
                                                 Console.WriteLine("PRESS ESCAPE TO RETURN");
-
+        
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
                                                     arrow_position = 1;

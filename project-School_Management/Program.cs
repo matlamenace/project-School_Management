@@ -10,6 +10,16 @@ namespace project_School_Management
     {
         static void Main(string[] args)
         {
+            ActionForAdmin.AddStudent();
+            Console.ReadKey();
+            ActionForAdmin.AddCourse();
+            Console.ReadKey();
+            Action.SeeTimetable(StudentList.studentlist["Mathis-Tiberghien"]);
+
+            Console.ReadKey();
+            
+
+
         }
     }
 }

@@ -14,10 +14,14 @@ namespace project_School_Management
         string[] results;
         List<Course> ListofCourses;
         Fee fee;
+        TimeTable timetable;
+
         public Student(string firstname,string famname,string gender, string dateofbirth) 
         {
             this.personnalinfo = new string[] { firstname, famname, gender, dateofbirth };
             this.fee = new Fee();
+            string timetablename = personnalinfo[0] + "-" + personnalinfo[1] + "-" + "-timetable";
+            this.timetable = new TimeTable(timetablename);
         }
         public string[] Personnalinfo 
         {
