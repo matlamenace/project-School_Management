@@ -128,7 +128,7 @@ namespace project_School_Management
                                             {
                                                 Console.Clear();
                                                 Console.WriteLine("   1111111111111111111");
-                                                Console.WriteLine("   2222222222222222222";
+                                                Console.WriteLine("   2222222222222222222");
                                                 Console.WriteLine("-> 3333333333333333333" + "\n");
 
 
