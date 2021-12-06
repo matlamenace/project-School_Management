@@ -34,14 +34,15 @@ namespace project_School_Management
                                 string answer = "";
                                 int index_error = 0;
                                 Console.Clear();
-                                while (answer != "Student" || answer != "Facultee" || answer != "Admin" || index_error.Equals(5))
+                                while (answer != "Student" && answer != "Facultee" && answer != "Admin" && index_error <= 5)
                                 {
-                                    Console.WriteLine("         Identify yourself !" + "\n");
-                                    Console.WriteLine("     Type Student if you are a student, Facultee if you are a facultee and Admin if you are an admin" + "\n");
-                                    answer = Console.ReadLine();
+                                    Console.WriteLine("Identify yourself !" + "\n");
+                                    Console.WriteLine("Type Student if you are a student, Facultee if you are a facultee or Admin if you are an admin" + "\n");
+                                    answer = Convert.ToString(Console.ReadLine());
+                                    index_error++;
                                 }
 
-                                if (index_error == 5)
+                                if (index_error >= 5)
                                 {
                                     Console.WriteLine("To much attempt: Retry...");
                                 }
@@ -67,9 +68,8 @@ namespace project_School_Management
                         {
                             Console.Clear();
 
-                            Console.WriteLine("-> 1111111111111111111");
-                            Console.WriteLine("   2222222222222222222");
-                            Console.WriteLine("   3333333333333333333" + "\n");
+                            Console.WriteLine("-> See Timetable");
+                            Console.WriteLine("   Pay Fee" + "\n");
 
 
                             Console.WriteLine("PRESS ENTER TO SELECT");
@@ -90,16 +90,15 @@ namespace project_School_Management
                                         case 0:
                                             {
                                                 Console.Clear();
-                                                Console.WriteLine("-> 1111111111111111111");
-                                                Console.WriteLine("   2222222222222222222");
-                                                Console.WriteLine("   3333333333333333333" + "\n");
+                                                Console.WriteLine("-> See Timetable");
+                                                Console.WriteLine("   Pay Fee" + "\n");
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
                                                 Console.WriteLine("PRESS ESCAPE TO RETURN");
 
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
-                                                    arrow_position = 2;
+                                                    arrow_position = 1;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 1;
 
@@ -108,9 +107,8 @@ namespace project_School_Management
                                         case 1:
                                             {
                                                 Console.Clear();
-                                                Console.WriteLine("   1111111111111111111");
-                                                Console.WriteLine("-> 2222222222222222222");
-                                                Console.WriteLine("   3333333333333333333" + "\n");
+                                                Console.WriteLine("   See Timetable");
+                                                Console.WriteLine("-> Pay Fee" + "\n");
 
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
@@ -119,25 +117,6 @@ namespace project_School_Management
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
                                                     arrow_position = 0;
-                                                else if (UserKey.Key == ConsoleKey.DownArrow)
-                                                    arrow_position = 2;
-
-                                                break;
-                                            }
-                                        case 2:
-                                            {
-                                                Console.Clear();
-                                                Console.WriteLine("   1111111111111111111");
-                                                Console.WriteLine("   2222222222222222222");
-                                                Console.WriteLine("-> 3333333333333333333" + "\n");
-
-
-                                                Console.WriteLine("PRESS ENTER TO SELECT");
-                                                Console.WriteLine("PRESS ESCAPE TO RETURN");
-        
-                                                UserKey = Console.ReadKey();
-                                                if (UserKey.Key == ConsoleKey.UpArrow)
-                                                    arrow_position = 1;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 0;
 
@@ -148,13 +127,10 @@ namespace project_School_Management
                                 switch (arrow_position)
                                 {
                                     case 0:
-                                        positional_value = 0;
+                                        positional_value = 4;
                                         break;
                                     case 1:
-                                        positional_value = 0; 
-                                        break;
-                                    case 2:
-                                        positional_value = 0;
+                                        positional_value = 5; 
                                         break;
                                 }
                             }
@@ -245,13 +221,13 @@ namespace project_School_Management
                                 switch (arrow_position)
                                 {
                                     case 0:
-                                        positional_value = 0;
+                                        positional_value = 6;
                                         break;
                                     case 1:
-                                        positional_value = 0; 
+                                        positional_value = 7; 
                                         break;
                                     case 2:
-                                        positional_value = 0;
+                                        positional_value = 8;
                                         break;
                                 }
                             }
@@ -261,9 +237,8 @@ namespace project_School_Management
                         {
                             Console.Clear();
 
-                            Console.WriteLine("-> 1111111111111111111");
-                            Console.WriteLine("   2222222222222222222");
-                            Console.WriteLine("   3333333333333333333" + "\n");
+                            Console.WriteLine("-> Add Student");
+                            Console.WriteLine("   Add Course" + "\n");
 
 
                             Console.WriteLine("PRESS ENTER TO SELECT");
@@ -284,16 +259,15 @@ namespace project_School_Management
                                         case 0:
                                             {
                                                 Console.Clear();
-                                                Console.WriteLine("-> 1111111111111111111");
-                                                Console.WriteLine("   2222222222222222222");
-                                                Console.WriteLine("   3333333333333333333" + "\n");
+                                                Console.WriteLine("-> Add Student");
+                                                Console.WriteLine("   Add Course" + "\n");
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
                                                 Console.WriteLine("PRESS ESCAPE TO RETURN");
 
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
-                                                    arrow_position = 2;
+                                                    arrow_position = 1;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 1;
 
@@ -302,9 +276,8 @@ namespace project_School_Management
                                         case 1:
                                             {
                                                 Console.Clear();
-                                                Console.WriteLine("   1111111111111111111");
-                                                Console.WriteLine("-> 2222222222222222222");
-                                                Console.WriteLine("   3333333333333333333" + "\n");
+                                                Console.WriteLine("   Add Student");
+                                                Console.WriteLine("-> Add Course" + "\n");
 
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
@@ -313,25 +286,6 @@ namespace project_School_Management
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
                                                     arrow_position = 0;
-                                                else if (UserKey.Key == ConsoleKey.DownArrow)
-                                                    arrow_position = 2;
-
-                                                break;
-                                            }
-                                        case 2:
-                                            {
-                                                Console.Clear();
-                                                Console.WriteLine("   1111111111111111111");
-                                                Console.WriteLine("   2222222222222222222");
-                                                Console.WriteLine("-> 3333333333333333333" + "\n");
-
-
-                                                Console.WriteLine("PRESS ENTER TO SELECT");
-                                                Console.WriteLine("PRESS ESCAPE TO RETURN");
-
-                                                UserKey = Console.ReadKey();
-                                                if (UserKey.Key == ConsoleKey.UpArrow)
-                                                    arrow_position = 1;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 0;
 
@@ -342,16 +296,55 @@ namespace project_School_Management
                                 switch (arrow_position)
                                 {
                                     case 0:
-                                        positional_value = 0;
+                                        positional_value = 9;
                                         break;
                                     case 1:
-                                        positional_value = 0;
-                                        break;
-                                    case 2:
-                                        positional_value = 0;
+                                        positional_value = 10;
                                         break;
                                 }
                             }
+                            break;
+                        }
+                    case 4: // --------------------------------Student branch (See Timetable)--------------------------------
+                        {
+                            Console.Clear();
+
+                            break;
+                        }
+                    case 5: // --------------------------------Student branch (Pay Fee)--------------------------------
+                        {
+                            Console.Clear();
+
+                            break;
+                        }
+                    case 6: // --------------------------------Facultee branch (Add grade Exam)--------------------------------
+                        {
+                            Console.Clear();
+
+                            break;
+                        }
+                    case 7: // --------------------------------Facultee branch (Add grade Assignement)--------------------------------
+                        {
+                            Console.Clear();
+
+                            break;
+                        }
+                    case 8: // --------------------------------Facultee branch (Show Student Attendance)--------------------------------
+                        {
+                            Console.Clear();
+
+                            break;
+                        }
+                    case 9: // --------------------------------Admin branch (Add Student)--------------------------------
+                        {
+                            Console.Clear();
+
+                            break;
+                        }
+                    case 10: // --------------------------------Admin branch (Add Course)--------------------------------
+                        {
+                            Console.Clear();
+
                             break;
                         }
                 }
