@@ -15,11 +15,6 @@ namespace project_School_Management
                 Console.WriteLine(key);
             }
         }
-    }
-        public static void SeeTimetable() 
-        {
-
-        }
         public void PayFee(Student student, double amount)
         {
             student.Fee.Pay(amount);
