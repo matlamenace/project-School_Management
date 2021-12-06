@@ -8,6 +8,7 @@ namespace project_School_Management
 {
     class Assignement
     {
+        public string grade { get; set; }
         Course course;
         string date;
         public Assignement(Course course, string date)
@@ -17,7 +18,11 @@ namespace project_School_Management
         }
         public override string ToString()
         {
-            return $"Assignement : {course.Subject} date : {date}";
+            if(grade != null)
+                return $"Assignement: {course.Subject} \t date: {date} \t grade: {grade}";
+            else
+                return $"Assignement: {course.Subject} \t date: {date}";
+
         }
     }
 }

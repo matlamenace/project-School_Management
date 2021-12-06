@@ -8,12 +8,20 @@ namespace project_School_Management
 {
     class Student
     {
+        // BENOIT
         string[] personnalinfo;
-        List<string> attendence;
+        List<string> attendance;
         string[] results;
+        List<Course> ListofCourses;
+        Fee fee;
+        TimeTable timetable;
+
         public Student(string firstname,string famname,string gender, string dateofbirth) 
         {
             this.personnalinfo = new string[] { firstname, famname, gender, dateofbirth };
+            this.fee = new Fee();
+            string timetablename = personnalinfo[0] + "-" + personnalinfo[1] + "-" + "-timetable";
+            this.timetable = new TimeTable(timetablename);
         }
         public string[] Personnalinfo 
         {
@@ -21,14 +29,18 @@ namespace project_School_Management
         }
         public List<string> Attendence 
         {
-            get { return attendence; }
-            set { attendence = value; }
+            get { return attendance; }
+            set { attendance = value; }
         }
         public string[] Results 
         {
             get { return results; }
             set { results = value; }
         }
-        osighzrgorgz();
+        public TimeTable Timetable
+        {
+            get { return timetable ; }
+            set { timetable = value; }
+        }
     }
 }

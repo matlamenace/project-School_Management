@@ -10,7 +10,6 @@ namespace project_School_Management
     {
         static void Main(string[] args)
         {
-
         }
     }
 }
