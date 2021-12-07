@@ -45,6 +45,7 @@ namespace project_School_Management
                                 if (index_error >= 5)
                                 {
                                     Console.WriteLine("To much attempt: Retry...");
+                                    Console.ReadKey();
                                 }
                                 else
                                 {
@@ -142,7 +143,7 @@ namespace project_School_Management
 
                             Console.WriteLine("-> Add grade to an Exam");
                             Console.WriteLine("   Add grade to an Assignement");
-                            Console.WriteLine("   Show student Attendance" + "\n");
+                            Console.WriteLine("   Show student Results" + "\n");
 
 
                             Console.WriteLine("PRESS ENTER TO SELECT");
@@ -165,7 +166,7 @@ namespace project_School_Management
                                                 Console.Clear();
                                                 Console.WriteLine("-> Add grade to an Exam");
                                                 Console.WriteLine("   Add grade to an Assignement");
-                                                Console.WriteLine("   Show student Attendance" + "\n");
+                                                Console.WriteLine("   Show student Results" + "\n");
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
                                                 Console.WriteLine("PRESS ESCAPE TO RETURN");
@@ -183,7 +184,7 @@ namespace project_School_Management
                                                 Console.Clear();
                                                 Console.WriteLine("   Add grade to an Exam");
                                                 Console.WriteLine("-> Add grade to an Assignement");
-                                                Console.WriteLine("   Show student Attendance" + "\n");
+                                                Console.WriteLine("   Show student Results" + "\n");
 
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
@@ -202,7 +203,7 @@ namespace project_School_Management
                                                 Console.Clear();
                                                 Console.WriteLine("   Add grade to an Exam");
                                                 Console.WriteLine("   Add grade to an Assignement");
-                                                Console.WriteLine("-> Show student Attendance" + "\n");
+                                                Console.WriteLine("-> Show student Results" + "\n");
 
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
@@ -308,43 +309,66 @@ namespace project_School_Management
                     case 4: // --------------------------------Student branch (See Timetable)--------------------------------
                         {
                             Console.Clear();
+                            Student student = StudentList.FromKeyToStudent();
 
+                            Console.Clear();
+                            Action.SeeTimetable(student);
+
+                            positional_value = 1;
                             break;
                         }
                     case 5: // --------------------------------Student branch (Pay Fee)--------------------------------
                         {
                             Console.Clear();
+                            Student student = StudentList.FromKeyToStudent();
 
+                            Console.Clear();
+                            Action.PayFee(student);
+
+                            positional_value = 1;
                             break;
                         }
                     case 6: // --------------------------------Facultee branch (Add grade Exam)--------------------------------
                         {
                             Console.Clear();
 
+                            ActionForFacultee.AddGradeToExam();
+
+                            positional_value = 2;
                             break;
                         }
                     case 7: // --------------------------------Facultee branch (Add grade Assignement)--------------------------------
                         {
                             Console.Clear();
 
+                            ActionForFacultee.AddGradeToAssignement();
+
+                            positional_value = 2;
                             break;
                         }
-                    case 8: // --------------------------------Facultee branch (Show Student Attendance)--------------------------------
+                    case 8: // --------------------------------Facultee branch (Show Student Results)--------------------------------
                         {
                             Console.Clear();
 
+                            ActionForFacultee.ShowStudentResults();
+
+                            positional_value = 2;
                             break;
                         }
                     case 9: // --------------------------------Admin branch (Add Student)--------------------------------
                         {
                             Console.Clear();
+                            ActionForAdmin.AddStudent();
 
+                            positional_value = 3;
                             break;
                         }
                     case 10: // --------------------------------Admin branch (Add Course)--------------------------------
                         {
                             Console.Clear();
+                            ActionForAdmin.AddCourse();
 
+                            positional_value = 3;
                             break;
                         }
                 }

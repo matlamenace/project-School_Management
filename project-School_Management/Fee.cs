@@ -18,6 +18,7 @@ namespace project_School_Management
 
         public void Pay(double amount)
         {
+            Console.WriteLine();
             if (To_Be_Pay - amount >= 0)
             {
                 To_Be_Pay -= amount;
@@ -26,6 +27,7 @@ namespace project_School_Management
             }
             else if (To_Be_Pay - amount < 0)
                 Console.WriteLine("A problem has occured: Amount bigger than the fees expected");
+            Console.ReadKey();
         }
     }
 }
