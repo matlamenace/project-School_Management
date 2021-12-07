@@ -9,7 +9,7 @@ namespace project_School_Management
     class Course
     {
         string subject;
-        string date;
+        public string date;
         Student student;
         public Course(string subject, string date, Student student) 
         {
