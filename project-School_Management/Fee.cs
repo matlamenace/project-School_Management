@@ -8,24 +8,30 @@ namespace project_School_Management
 {
     class Fee
     {
-        double ToBePay;
-        double BeenPaid;
+        double to_Be_Pay;
+        double Been_Paid;
         public Fee()
         {
-            this.ToBePay = 1000;
-            this.BeenPaid = 0;
+            this.to_Be_Pay = 1000;
+            this.Been_Paid = 0;
         }
 
-        public void Pay(double amount)
+        public void Pay(double amount) //method used by the Action class for a student to pay a fee
         {
-            if (ToBePay - amount >= 0)
+            Console.WriteLine();
+            if (to_Be_Pay - amount >= 0)
             {
-                ToBePay -= amount;
-                BeenPaid += amount;
-                Console.WriteLine($"Amount to be pay: {ToBePay}$");
+                to_Be_Pay -= amount;
+                Been_Paid += amount;
+                Console.WriteLine($"Amount to be pay: {to_Be_Pay}$");
             }
-            else if (ToBePay - amount < 0)
+            else if (to_Be_Pay - amount < 0)
                 Console.WriteLine("A problem has occured: Amount bigger than the fees expected");
+            Console.ReadKey();
+        }
+        public double To_Be_Pay
+        {
+            get { return to_Be_Pay; }
         }
     }
 }
