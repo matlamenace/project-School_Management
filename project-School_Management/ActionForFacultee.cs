@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace project_School_Management
 {
-    class ActionForFacultee //class of action
+    class ActionForFacultee : Action //class of action used by someone connected as a professor 
     {
-        public static void AddGradeToExam()
+        public static void AddGradeToExam() 
         {
             Console.Clear();
             Student student = StudentList.FromKeyToStudent();
@@ -35,7 +36,7 @@ namespace project_School_Management
 
             student.results.Add(str_result);
         }
-        public static void AddGradeToAssignement()
+        public static void AddGradeToAssignement() //This method creates a new grade to an assignment
         {
             Console.Clear();
             Student student = StudentList.FromKeyToStudent();
@@ -62,18 +63,116 @@ namespace project_School_Management
 
             student.Results.Add(str_result);
         }
-        public static void ShowStudentResults()
+        
+        public static void AddAssigment() //This method creates a new assigment
         {
             Console.Clear();
-            Student student = StudentList.FromKeyToStudent();
-            Console.Clear();
-
-            
-            foreach (string s in student.results)
+            Console.WriteLine("What is the student's first name ?");
+            string stfirstname = Console.ReadLine().ToLower();
+            if (stfirstname == "")
             {
-                Console.WriteLine(s);
+                Console.WriteLine("The name you gave is null, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddAssigment();
             }
-            Console.ReadKey();
+            stfirstname = new System.Globalization.CultureInfo("en-US", false).TextInfo.ToTitleCase(stfirstname.ToLower());
+            Console.Clear();
+            Console.WriteLine("What is the student's family name ?");
+            string stfamname = Console.ReadLine().ToLower();
+            if (stfamname == "")
+            {
+                Console.WriteLine("The name you gave is null, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddAssigment();
+            }
+            stfamname = new System.Globalization.CultureInfo("en-US", false).TextInfo.ToTitleCase(stfamname.ToLower());
+            Console.Clear();
+            Console.WriteLine("When is the assignment going to happen ? Type a date (dd/mm)");
+            string date = Console.ReadLine();
+            if (date[2] != '/' || date.Length != 5 || date == "")
+            {
+
+                Console.WriteLine("The date is not conform to a dd/mm date type, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddAssigment();
+            }
+            Console.Clear();
+            Console.WriteLine("What is the subject of the assignement ?");
+            string subject = Console.ReadLine();
+            if (subject == "")
+            {
+                Console.WriteLine("The assignment you entered is null, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddAssigment();
+            }
+            if (StudentList.studentlist.ContainsKey(stfirstname + "-" + stfamname) == false)
+            {
+                Console.WriteLine("We can't find the student you entered, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddAssigment();
+            }
+            Assignement assigment = new Assignement(StudentList.studentlist[stfirstname + "-" + stfamname], date, subject);
+            Console.Clear();
+        }
+        public static void AddExam() //This method get creates a new exam
+        {
+            Console.Clear();
+            Console.WriteLine("What is the student's first name ?");
+            string stfirstname = Console.ReadLine().ToLower();
+            if (stfirstname == "")
+            {
+                Console.WriteLine("The name you gave is null, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddExam();
+            }
+            stfirstname = new System.Globalization.CultureInfo("en-US", false).TextInfo.ToTitleCase(stfirstname.ToLower());
+            Console.Clear();
+            Console.WriteLine("What is the student's family name ?");
+            string stfamname = Console.ReadLine().ToLower();
+            if (stfamname == "")
+            {
+                Console.WriteLine("The name you gave is null, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddExam();
+            }
+            stfamname = new System.Globalization.CultureInfo("en-US", false).TextInfo.ToTitleCase(stfamname.ToLower());
+            Console.Clear();
+            Console.WriteLine("When is the exam going to happen ? Type a date (dd/mm)");
+            string date = Console.ReadLine();
+            if (date[2] != '/' || date.Length != 5 || date == "")
+            {
+
+                Console.WriteLine("The date is not conform to a dd/mm date type, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddExam();
+            }
+            Console.Clear();
+            Console.WriteLine("What is the subject of the exam ?");
+            string subject = Console.ReadLine();
+            if (subject == "")
+            {
+                Console.WriteLine("The exam you entered is null, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddExam();
+            }
+            if (StudentList.studentlist.ContainsKey(stfirstname + "-" + stfamname) == false)
+            {
+                Console.WriteLine("We can't find the student you entered, please try again");
+                Thread.Sleep(1500);
+                Console.Clear();
+                AddExam();
+            }
+            Exam exam = new Exam(StudentList.studentlist[stfirstname + "-" + stfamname], date, subject);
+            Console.Clear();
         }
     }
 }

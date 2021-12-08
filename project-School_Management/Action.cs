@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project_School_Management
 {
-    class Action //class of action
+    abstract class Action //class of action used by someone connected as a student 
     {
         public static void SeeTimetable(Student student) 
         {
@@ -23,6 +23,19 @@ namespace project_School_Management
             double amount = Convert.ToDouble(Console.ReadLine());
 
             student.Fee.Pay(amount);
+        }
+        public static void ShowStudentResults()
+        {
+            Console.Clear();
+            Student student = StudentList.FromKeyToStudent();
+            Console.Clear();
+
+
+            foreach (string s in student.results)
+            {
+                Console.WriteLine(s);
+            }
+            Console.ReadKey();
         }
     }
 }

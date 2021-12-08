@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project_School_Management
 {
-    class StudentList
+    class StudentList // method that contains a dictionary where all student's data is stored, the key access is Firstname-Familyname
     {
         public static Dictionary<string, Student> studentlist = new Dictionary<string, Student>();
         public Dictionary<string, Student> Studentlist 
@@ -14,7 +14,7 @@ namespace project_School_Management
             get { return studentlist; }
             set { studentlist = value; }
         }
-        public static Student FromKeyToStudent()
+        public static Student FromKeyToStudent() //method that permit a user to access a particular instance of Student in the dictionary
         {
             Console.Clear();
             Console.WriteLine("What is the student's first name ?");

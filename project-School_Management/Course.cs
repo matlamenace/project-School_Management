@@ -22,7 +22,7 @@ namespace project_School_Management
         {
             get { return subject; }
         }
-        public static string Fromdd_mmToWrittenDate(string date) 
+        public static string Fromdd_mmToWrittenDate(string date) //method to turn a dd/mm date to a written date
         {
             string[] days = new string[] { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
             string[] months = new string[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December " };
@@ -32,7 +32,7 @@ namespace project_School_Management
             return months[splitedate[1] - 1] + " " + date[0] + date[1];
 
         }
-        private void AddToCalendar() 
+        private void AddToCalendar() //method that automatically add the course to the student's timetable 
         {
             if (student.Timetable.Timetable[date] == "Day off")
             {
