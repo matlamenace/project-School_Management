@@ -8,24 +8,26 @@ namespace project_School_Management
 {
     class Fee
     {
-        double ToBePay;
-        double BeenPaid;
+        double To_Be_Pay;
+        double Been_Paid;
         public Fee()
         {
-            this.ToBePay = 1000;
-            this.BeenPaid = 0;
+            this.To_Be_Pay = 1000;
+            this.Been_Paid = 0;
         }
 
         public void Pay(double amount)
         {
-            if (ToBePay - amount >= 0)
+            Console.WriteLine();
+            if (To_Be_Pay - amount >= 0)
             {
-                ToBePay -= amount;
-                BeenPaid += amount;
-                Console.WriteLine($"Amount to be pay: {ToBePay}$");
+                To_Be_Pay -= amount;
+                Been_Paid += amount;
+                Console.WriteLine($"Amount to be pay: {To_Be_Pay}$");
             }
-            else if (ToBePay - amount < 0)
+            else if (To_Be_Pay - amount < 0)
                 Console.WriteLine("A problem has occured: Amount bigger than the fees expected");
+            Console.ReadKey();
         }
     }
 }

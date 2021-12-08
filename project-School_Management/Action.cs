@@ -14,6 +14,15 @@ namespace project_School_Management
             {
                 Console.WriteLine(key);
             }
+            Console.ReadKey();
+        }
+        public static void PayFee(Student student)
+        {
+            Console.Clear();
+            Console.WriteLine("How much do you want to pay ?");
+            double amount = Convert.ToDouble(Console.ReadLine());
+
+            student.Fee.Pay(amount);
         }
     }
 }

@@ -8,20 +8,23 @@ namespace project_School_Management
 {
     class Student
     {
-        // BENOIT
         string[] personnalinfo;
         List<string> attendance;
-        string[] results;
-        List<Course> ListofCourses;
+        public List<string> results;
         Fee fee;
         TimeTable timetable;
 
-        public Student(string firstname,string famname,string gender, string dateofbirth) 
+        public Student(string firstname,string famname,string dateofbirth, string gender) 
         {
-            this.personnalinfo = new string[] { firstname, famname, gender, dateofbirth };
+            this.personnalinfo = new string[] { firstname, famname, dateofbirth, gender };
             this.fee = new Fee();
             string timetablename = personnalinfo[0] + "-" + personnalinfo[1] + "-" + "-timetable";
             this.timetable = new TimeTable(timetablename);
+            this.results = new List<string>();
+            results.Add("\t\tRESULTS BOOK\n");
+        }
+        public Student()
+        {
         }
         public string[] Personnalinfo 
         {
@@ -32,15 +35,28 @@ namespace project_School_Management
             get { return attendance; }
             set { attendance = value; }
         }
-        public string[] Results 
+        public List<string> Results 
         {
             get { return results; }
             set { results = value; }
+        }
+        public Fee Fee
+        {
+            get { return fee; }
+            set { fee = value; }
         }
         public TimeTable Timetable
         {
             get { return timetable ; }
             set { timetable = value; }
+        }
+        public void ResultToString()
+        {
+            Console.WriteLine("Results book:\n");
+            foreach(string result in results)
+            {
+                Console.WriteLine(result);
+            }
         }
     }
 }
