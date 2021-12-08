@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace project_School_Management
 {
+    // PROJECT BY Matthieu Perret (24475), Lucie Mallet (24470), Mathis Tiberghien (24445), Benoit Jaffuel (24431)
     class ActionForAdmin  //Class of action used by someone connected as an admin
     {
         public static void AddStudent() //Creates a new student and add it to the school
