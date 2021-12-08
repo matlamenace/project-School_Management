@@ -19,7 +19,7 @@ namespace project_School_Management
             Console.WriteLine("What is the subject of the Exam ?");
             string subject = Console.ReadLine();
 
-            Console.WriteLine("\nWhat is the date of the Exam ? Write a dd/mm/yyyy date type");
+            Console.WriteLine("\nWhat is the date of the Exam ? Write a dd/mm date type");
             string date = Console.ReadLine();
 
             Course course = new Course(subject, date, student);
@@ -46,7 +46,7 @@ namespace project_School_Management
             Console.WriteLine("What is the subject of the Assignement ?");
             string subject = Console.ReadLine();
 
-            Console.WriteLine("\nWhat is the date of the Assignement ? Write a dd/mm/yyyy date type");
+            Console.WriteLine("\nWhat is the date of the Assignement ? Write a dd/mm date type");
             string date = Console.ReadLine();
 
             Course course = new Course(subject, date, student);
