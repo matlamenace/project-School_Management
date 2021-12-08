@@ -143,6 +143,8 @@ namespace project_School_Management
 
                             Console.WriteLine("-> Add grade to an Exam");
                             Console.WriteLine("   Add grade to an Assignement");
+                            Console.WriteLine("   Add an Assignement");
+                            Console.WriteLine("   Add an Exam");
                             Console.WriteLine("   Show student Results" + "\n");
 
 
@@ -166,6 +168,8 @@ namespace project_School_Management
                                                 Console.Clear();
                                                 Console.WriteLine("-> Add grade to an Exam");
                                                 Console.WriteLine("   Add grade to an Assignement");
+                                                Console.WriteLine("   Add an Assignement");
+                                                Console.WriteLine("   Add an Exam");
                                                 Console.WriteLine("   Show student Results" + "\n");
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
@@ -173,7 +177,7 @@ namespace project_School_Management
 
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
-                                                    arrow_position = 2;
+                                                    arrow_position = 4;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 1;
 
@@ -184,6 +188,8 @@ namespace project_School_Management
                                                 Console.Clear();
                                                 Console.WriteLine("   Add grade to an Exam");
                                                 Console.WriteLine("-> Add grade to an Assignement");
+                                                Console.WriteLine("   Add an Assignement");
+                                                Console.WriteLine("   Add an Exam");
                                                 Console.WriteLine("   Show student Results" + "\n");
 
 
@@ -203,7 +209,9 @@ namespace project_School_Management
                                                 Console.Clear();
                                                 Console.WriteLine("   Add grade to an Exam");
                                                 Console.WriteLine("   Add grade to an Assignement");
-                                                Console.WriteLine("-> Show student Results" + "\n");
+                                                Console.WriteLine("-> Add an Assignement");
+                                                Console.WriteLine("   Add an Exam");
+                                                Console.WriteLine("   Show student Results" + "\n");
 
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
@@ -212,6 +220,48 @@ namespace project_School_Management
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
                                                     arrow_position = 1;
+                                                else if (UserKey.Key == ConsoleKey.DownArrow)
+                                                    arrow_position = 3;
+
+                                                break;
+                                            }
+                                        case 3:
+                                            {
+                                                Console.Clear();
+                                                Console.WriteLine("   Add grade to an Exam");
+                                                Console.WriteLine("   Add grade to an Assignement");
+                                                Console.WriteLine("   Add an Assignement");
+                                                Console.WriteLine("-> Add an Exam");
+                                                Console.WriteLine("   Show student Results" + "\n");
+
+
+                                                Console.WriteLine("PRESS ENTER TO SELECT");
+                                                Console.WriteLine("PRESS ESCAPE TO RETURN");
+
+                                                UserKey = Console.ReadKey();
+                                                if (UserKey.Key == ConsoleKey.UpArrow)
+                                                    arrow_position = 2;
+                                                else if (UserKey.Key == ConsoleKey.DownArrow)
+                                                    arrow_position = 4;
+
+                                                break;
+                                            }
+                                        case 4:
+                                            {
+                                                Console.Clear();
+                                                Console.WriteLine("   Add grade to an Exam");
+                                                Console.WriteLine("   Add grade to an Assignement");
+                                                Console.WriteLine("   Add an Assignement");
+                                                Console.WriteLine("   Add an Exam");
+                                                Console.WriteLine("-> Show student Results" + "\n");
+
+
+                                                Console.WriteLine("PRESS ENTER TO SELECT");
+                                                Console.WriteLine("PRESS ESCAPE TO RETURN");
+
+                                                UserKey = Console.ReadKey();
+                                                if (UserKey.Key == ConsoleKey.UpArrow)
+                                                    arrow_position = 3;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 0;
 
@@ -228,6 +278,12 @@ namespace project_School_Management
                                         positional_value = 7; 
                                         break;
                                     case 2:
+                                        positional_value = 12;
+                                        break;
+                                    case 3:
+                                        positional_value = 13;
+                                        break;
+                                    case 4:
                                         positional_value = 8;
                                         break;
                                 }
@@ -239,7 +295,8 @@ namespace project_School_Management
                             Console.Clear();
 
                             Console.WriteLine("-> Add Student");
-                            Console.WriteLine("   Add Course" + "\n");
+                            Console.WriteLine("   Add Course");
+                            Console.WriteLine("   See if a student paid his fees" + "\n");
 
 
                             Console.WriteLine("PRESS ENTER TO SELECT");
@@ -261,14 +318,15 @@ namespace project_School_Management
                                             {
                                                 Console.Clear();
                                                 Console.WriteLine("-> Add Student");
-                                                Console.WriteLine("   Add Course" + "\n");
+                                                Console.WriteLine("   Add Course");
+                                                Console.WriteLine("   See if a student paid his fees" + "\n");
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
                                                 Console.WriteLine("PRESS ESCAPE TO RETURN");
 
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
-                                                    arrow_position = 1;
+                                                    arrow_position = 2;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 1;
 
@@ -278,7 +336,8 @@ namespace project_School_Management
                                             {
                                                 Console.Clear();
                                                 Console.WriteLine("   Add Student");
-                                                Console.WriteLine("-> Add Course" + "\n");
+                                                Console.WriteLine("-> Add Course");
+                                                Console.WriteLine("   See if a student paid his fees" + "\n");
 
 
                                                 Console.WriteLine("PRESS ENTER TO SELECT");
@@ -287,6 +346,25 @@ namespace project_School_Management
                                                 UserKey = Console.ReadKey();
                                                 if (UserKey.Key == ConsoleKey.UpArrow)
                                                     arrow_position = 0;
+                                                else if (UserKey.Key == ConsoleKey.DownArrow)
+                                                    arrow_position = 2;
+
+                                                break;
+                                            }
+                                        case 2:
+                                            {
+                                                Console.Clear();
+                                                Console.WriteLine("   Add Student");
+                                                Console.WriteLine("   Add Course");
+                                                Console.WriteLine("-> See if a student paid his fees" + "\n");
+
+
+                                                Console.WriteLine("PRESS ENTER TO SELECT");
+                                                Console.WriteLine("PRESS ESCAPE TO RETURN");
+
+                                                UserKey = Console.ReadKey();
+                                                if (UserKey.Key == ConsoleKey.UpArrow)
+                                                    arrow_position = 1;
                                                 else if (UserKey.Key == ConsoleKey.DownArrow)
                                                     arrow_position = 0;
 
@@ -301,6 +379,9 @@ namespace project_School_Management
                                         break;
                                     case 1:
                                         positional_value = 10;
+                                        break;
+                                    case 2:
+                                        positional_value = 11;
                                         break;
                                 }
                             }
@@ -369,6 +450,32 @@ namespace project_School_Management
                             ActionForAdmin.AddCourse();
 
                             positional_value = 3;
+                            break;
+                        }
+                    case 11: // --------------------------------Admin branch (See if Paid)--------------------------------
+                        {
+                            Console.Clear();
+                            ActionForAdmin.SeeIfPaid();
+
+                            positional_value = 3;
+                            break;
+                        }
+                    case 12: // --------------------------------Facultee branch (Add Assignement)--------------------------------
+                        {
+                            Console.Clear();
+
+                            ActionForFacultee.AddAssigment();
+
+                            positional_value = 2;
+                            break;
+                        }
+                    case 13: // --------------------------------Facultee branch (Add Exam)--------------------------------
+                        {
+                            Console.Clear();
+
+                            ActionForFacultee.AddExam();
+
+                            positional_value = 2;
                             break;
                         }
                 }

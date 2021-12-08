@@ -123,8 +123,9 @@ namespace project_School_Management
             }
             else
             {
-                Console.WriteLine($"{student.Personnalinfo[0]} {student.Personnalinfo[1]} still have to pay {student.Fee.To_Be_Pay} euros ");
+                Console.WriteLine($"{student.Personnalinfo[0]} {student.Personnalinfo[1]} still have to pay {student.Fee.To_Be_Pay} € ");
             }
+            Console.ReadKey();
         }
     }   
 }
